@@ -58,7 +58,7 @@ Pour commencer nous allons créer un nouveau dossier. Dans celui-ci nous allons 
 
 Dans app.py il vous faudra copier coller ceci :
 
-```
+``` python
 import time
 
 import redis
