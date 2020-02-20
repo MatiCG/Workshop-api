@@ -4,9 +4,7 @@ WorkShop pour dévelloper sa première Rest API en python avec Docker.
 
 ## Partie 1 Installer Docker
 
-__Note :__
-
-Le tutoriel d'installation ne fonctionne que pour fedora 28 et plus.
+__Note :__ Le tutoriel d'installation ne fonctionne que pour fedora 28 et plus.
 
 D'abord mettez à jour vos packets avec :
 
