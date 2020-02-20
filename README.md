@@ -1,8 +1,8 @@
 # WorkShop Rest API Python
 
-WorkShop pour dévelloper sa première Rest API en python avec Docker.
+WorkShop pour développer sa première Rest API en python avec Docker.
 
-## Partie 1 Installer Docker
+## Partie 1: Installer Docker
 
 __Note :__ Le tutoriel d'installation ne fonctionne que pour fedora 28 et plus.
 
@@ -10,7 +10,7 @@ D'abord mettez à jour vos packets avec :
 
 `sudo dnf -y update`
 
-Si des packets son mis à jour redémarrer votre pc.
+Si des packets sont mis à jour redémarrer votre pc.
 Ensuite il faudra ajouter le repo docker à votre fedora :
 
 `sudo dnf -y install dnf-plugins-core`
@@ -50,7 +50,7 @@ Enfin pour vérifier si Docker fonctionne bien il vous suffit de pull une image 
 `sudo docker pull alpine`
 
 
-## Partie 2 Faire son premier Container
+## Partie 2: Faire son premier Container
 
 Nous allons voir comment créer un Docker Compose et un Dockerfile pour faire tourner nos containers.
 
@@ -144,3 +144,42 @@ Il vous suffit maintenant d'ouvrir votre navigateur et de coller :
 `http://localhost:5000/`
 
 Vous pouvez mainteant voir votre  Container/Compose tourner.
+
+## Partie 3: Faire des routes avec Flask
+
+Tout d'abord il faut importer Flask
+
+``` python
+from flask import Flask
+```
+
+Ensuite il faut définir votre première route
+
+``` python
+app = Flask(__name__)
+
+@app.route('/hello')
+def hello_world():
+    return "Hello World!"
+```
+
+Vous savez maintenant définir une route !
+
+## Partie 4: Tester votre API
+
+Installez Postman depuis le site (installez bien l'application et non l'extension Chrome):
+
+https://www.postman.com/
+
+Une fois dessus vous pouvez tester vos routes et les réponses depuis postman. Si vous ne comprenez pas comment l'utliser, demandez-nous
+
+Si vous recevez bien `"Hello World"`, vous avez une API qui marche.
+
+
+## Partie 5: La suite
+
+Définissez différents comportements avec des routes cohérentes.
+
+Faites un service méteo. Vous pouvez faire appel à l'api méteo de votre choix.
+
+Faites un système de "login" avec un dictionnaire des noms d'utilisateurs autorisés et leurs mdp. Il devra return true si l'utilisateur est bon et fals sinon.
