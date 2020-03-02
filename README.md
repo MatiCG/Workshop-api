@@ -137,7 +137,7 @@ Le compose va agir comme un "Makefile" et définir 2 services, Redis et Web.
 
 Il ne vous reste plus qu'à démarrer votre service, pour cela rien de plus simple, il vous suffit de run :
 
-`sudo docker-compose up`
+`sudo docker-compose up --build`
 
 Il vous suffit maintenant d'ouvrir votre navigateur et de coller :
 
